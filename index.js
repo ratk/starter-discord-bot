@@ -76,7 +76,7 @@ app.get('/register_commands', async (req,res) =>{
   let slash_commands = [
     {
       "name": "yo",
-      "description": "replies with Yo!",
+      "description": "replies with Yooooooo!",
       "options": []
     },
     {
