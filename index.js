@@ -118,14 +118,11 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
     }
 
     if(interaction.data.name == 'update'){
-      return await interaction.reply({ content: 'Update!', ephemeral: true });
-      // return res.send({
-      //   type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
-      //   data: {
-      //     content: `Yo ${interaction.member.user.username}!`,
-      //     ephemeral: false
-      //   },
-      // });
+      return res.send({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+        data: {
+          content: `Update ${interaction.member.user.username}!`,
+        },
     }
   }
 
